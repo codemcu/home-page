@@ -1,5 +1,6 @@
 var gulp        = require('gulp'),
 	del         = require('del'),
+	autoprefixer = require('autoprefixer'),
 	browserSync = require('browser-sync').create(),
 	$ 			= require('gulp-load-plugins')({lazy: true});
 
@@ -62,14 +63,21 @@ gulp.task('imagemin', function() {
  * procesamiento de SCSS
  */ 
 gulp.task('css', function() {
+	var processors = [
+	autoprefixer(
+		{
+			browsers: ['last 2 version', '> 5%']
+		})
+	];
 	return gulp.src([srcPaths.styles + '**/*.scss'])
-			.pipe($.sourcemaps.init())
-			.pipe($.sass(
-				{outputStyle: 'compressed'}
-			))
-			.pipe($.sourcemaps.write())
-			.pipe(gulp.dest(distPaths.styles))
-			.pipe(browserSync.stream());
+		.pipe($.sourcemaps.init())
+		.pipe($.sass(
+			{outputStyle: 'compressed'}
+		))
+		.pipe($.postcss(processors))
+		.pipe($.sourcemaps.write())
+		.pipe(gulp.dest(distPaths.styles))
+		.pipe(browserSync.stream());
 });
 
 /*
