@@ -1,8 +1,11 @@
 var gulp        = require('gulp'),
-	del         = require('del'),
-	autoprefixer = require('autoprefixer'),
-	browserSync = require('browser-sync').create(),
-	$ 			= require('gulp-load-plugins')({lazy: true});
+		del         = require('del'),
+		autoprefixer = require('autoprefixer'),
+		browserSync = require('browser-sync').create(),
+		$ 			= require('gulp-load-plugins')({lazy: true}),
+		reporter    = require('postcss-reporter'),
+		stylelint   = require('stylelint'),
+		syntax_scss = require('postcss-scss');
 
 /*
  * directorios origen
@@ -60,9 +63,58 @@ gulp.task('imagemin', function() {
 });
 
 /*
+ * lint en css
+ */
+
+gulp.task("scss-lint", function() {
+	// Stylelint config rules
+	var stylelintConfig = {
+		"rules": {
+			"block-no-empty": true,
+			"color-no-invalid-hex": true,
+			"declaration-colon-space-after": "always",
+			"declaration-colon-space-before": "never",
+			"function-comma-space-after": "always",
+			"function-url-quotes": "none",
+			"media-feature-colon-space-after": "always",
+			"media-feature-colon-space-before": "never",
+			"media-feature-name-no-vendor-prefix": true,
+			"max-empty-lines": 5,
+			"number-leading-zero": "never",
+			"number-no-trailing-zeros": true,
+			"property-no-vendor-prefix": true,
+			"selector-list-comma-space-before": "never",
+			"selector-list-comma-newline-after": "always",
+			//"selector-no-id": true,
+			"string-quotes": "double",
+			"value-no-vendor-prefix": true
+		}
+	}
+
+	var processors = [
+		stylelint(stylelintConfig),
+		reporter({
+			clearMessages: true,
+			throwError: true
+		})
+	];
+
+	return gulp.src([
+				srcPaths.styles + '**/*.scss'
+				//'app/assets/css/**/*.scss',
+				// Ignore linting vendor assets
+				// Useful if you have bower components
+				//'!app/assets/css/vendor/**/*.scss'
+			])
+			.pipe($.postcss(processors, {
+				syntax: syntax_scss
+			}));
+});
+
+/*
  * procesamiento de SCSS
  */ 
-gulp.task('css', function() {
+gulp.task('css', ['scss-lint'], function() {
 	var processors = [
 	autoprefixer(
 		{
