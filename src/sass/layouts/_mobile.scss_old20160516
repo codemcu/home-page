@@ -1,0 +1,244 @@
+/*media queries mobile y tablets*/
+@media(min-width: 1200px) {
+	.career img {
+		max-width: 200px;
+	}
+	section .vertical-space {
+	    margin-bottom: 0;
+	}
+	section.contact .diff{
+		width: 320px;
+	}
+}
+
+@media(max-width: 1200px) {
+	section.contact .diff{
+		width: 320px;
+	}
+}
+
+
+
+@media (min-width: 667px) and (max-width: 991px){
+	header{
+		.header-content {
+			.header-content-inner .img-home img{
+				max-width: 75%;
+			}
+			padding: 0 15px;
+		}
+		.header-title {
+			// background-color: rgba(0,0,0,.3);
+			bottom: 10%;
+			h1 {
+				font-size: 5rem;
+			}
+		}
+	}
+	.logos-lenguajes img {
+		width: 40px;
+	}
+}
+
+@media(min-width: 768px) {
+	header .header-content {
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		padding: 0 50px;
+		transform: translateY(-50%);
+		transform: translateX(-50%);
+	}
+	header {
+		min-height: 100%;
+	}
+	.timeline>li {
+		margin-bottom: 160px;
+		min-height: 100px;
+	}
+	.timeline>li.timeline-inverted>.timeline-panel {
+		float: right;
+		text-align: left;
+		padding: 0 30px 20px 50px;
+	}
+	.timeline:before {
+		left: 50%;
+	}
+	.timeline>li .timeline-panel {
+		width: 41%;
+		float: left;
+		padding: 0 50px 20px 30px;
+		text-align: right;
+	}
+	.timeline>li .timeline-image {
+		left: 45%;
+		margin-left: -45px;
+	}
+	.navbar-default {
+		border-color: rgba(255, 255, 255, .3);
+		background-color: transparent;
+	}
+	.navbar-default .navbar-header .navbar-brand {
+		color: rgba(255, 255, 255, .7);
+	}
+	.navbar-default .navbar-header .navbar-brand:hover,
+	.navbar-default .navbar-header .navbar-brand:focus {
+		color: #fff;
+	}
+	.navbar-default .nav > li>a,
+	.navbar-default .nav>li>a:focus {
+		color: rgba(255, 255, 255, .7);
+	}
+	.navbar-default .nav > li>a:hover,
+	.navbar-default .nav>li>a:focus:hover {
+		color: #fff;
+	}
+	.navbar-default.affix {
+		border-color: rgba(34, 34, 34, .05);
+		background-color: #fff;
+	}
+	.navbar-default.affix .navbar-header .navbar-brand {
+		color: $colorTextoSecundario;
+	}
+	.navbar-default.affix .navbar-header .navbar-brand:hover,
+	.navbar-default.affix .navbar-header .navbar-brand:focus {
+		color: $colorTextoSecundario;
+	}
+	.navbar-default.affix .nav > li>a,
+	.navbar-default.affix .nav>li>a:focus {
+		color: #222;
+	}
+	.navbar-default.affix .nav > li>a:hover,
+	.navbar-default.affix .nav>li>a:focus:hover {
+		color: $colorTextoSecundario;
+	}
+	.career img {
+		max-width: 155px;
+	}
+	footer .form-footer{
+		margin: 0 15px;
+	}
+	section.contact .diff{
+		width: 230px;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 666px){
+	header{
+		.header-content {
+			.header-content-inner .img-home img{
+				max-width: 75%;
+			}
+			padding: 65px 15px;
+		}
+		.header-title{
+			background-color: rgba(0, 0, 0, .3);
+			bottom: 10%;
+			h1 {
+				font-size: 5rem;
+			}
+		}
+	}
+	section {
+		padding: 50px 0;
+		.text-faded {
+			padding: 20px 15px;
+			text-align: center;
+		}
+		&.contact {
+			padding-bottom: 0;
+			.diff{
+				position: relative;
+				width: auto;
+			    padding-bottom: 20px;
+			    margin-top: 25px;
+			}
+		}
+	}
+}
+
+@media (max-width: 479px){
+	header{
+		.header-content{
+			padding: 45% 0;
+		}
+		.header-title{
+			bottom: 10%;
+			h1 {
+				font-size: 4rem;
+			}
+		}
+	}
+	section {
+		padding: 50px 0;
+		.fa-2x {
+			font-size: 1.2rem;
+			color: $colorTextoSecundario;
+			padding-right: 2px;
+		}
+		.elem-esp{
+			margin-left: -30px;
+		}
+		.text-map{
+			font-size: 1.3rem;
+		}
+		.text-faded {
+			padding: 20px 15px;
+			text-align: center;
+		}
+		.service-box{
+			margin-bottom: 45px;
+		}
+		.hexagon {
+			width: 70px;
+			height: 35px;
+			img {
+				max-width: 55px;
+			}
+			&.h-1{
+			position: absolute;
+			}
+			&.h-2{
+				position: absolute;
+			    left: 88px;
+			    top: 0px;
+			}
+			&.h-3{
+				position: absolute;
+			    left: 52px;
+			    top: -65px;
+			}
+			&.h-4{
+				position: absolute;
+			    left: 124px;
+			    top: 64px;
+			}
+			&.h-5{
+				position: absolute;
+			    left: 161px;
+			    top: 0px;
+			}
+		}
+		.hexagon:before,
+		.hexagon:after {
+			border-left: 35px solid transparent;
+			border-right: 35px solid transparent;
+		}
+		.hexagon:before {
+			border-bottom: 25px solid #f2f2f2;
+		}
+		.hexagon:after {
+			border-top: 25px solid #f2f2f2;
+		}
+		&.contact {
+			padding-bottom: 0;
+			.diff{
+				position: relative;
+				width: auto;
+			    padding-bottom: 20px;
+			    margin-top: 25px;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,179 @@
+section {
+	padding: 100px 0;
+	h2{
+		padding-bottom: 30px;
+		color: $colorTextoPrincipal;
+	}
+	h3{
+		font-weight: 100;
+	}
+	ul li small{
+		color: rgba(255, 255, 255, .6);
+	}
+	.text-faded{
+		padding: 0px 35px;
+	}
+	.vertical-space {
+	    margin-bottom: 75px;
+	}
+	.container-hexagon{
+		position: relative;
+		height: 280px;
+		margin-top: 40px;
+		background: url(../img/img-panel.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-origin: content-box;
+		// overflow: hidden;
+	}
+	.hexagon {
+		position: relative;
+		width: 120px; 
+		height: 60px;
+		background-color: #f2f2f2;
+		margin: 86px 0;
+		img{
+			position: absolute;
+		    left: 50%;
+		    top: 50%;
+		    margin-top: -28%;
+		    margin-left: -36%;
+		}
+		&.h-1{
+			position: absolute;
+		}
+		&.h-2{
+			position: absolute;
+		    left: 140px;
+		    top: 0px;
+		}
+		&.h-3{
+			position: absolute;
+		    left: 78px;
+		    top: -98px;
+		}
+		&.h-4{
+			position: absolute;
+		    left: 204px;
+		    top: 98px;
+		}
+		&.h-5{
+			position: absolute;
+		    left: 264px;
+		    top: 0px;
+		}
+	}
+	.hexagon:before,
+	.hexagon:after {
+		content: "";
+		position: absolute;
+		width: 0;
+		border-left: 60px solid transparent;
+		border-right: 60px solid transparent;
+	}
+	.hexagon:before {
+		bottom: 100%;
+		border-bottom: 35px solid #f2f2f2;
+	}
+	.hexagon:after {
+		top: 100%;
+		width: 0;
+		border-top: 35px solid #f2f2f2;
+	}
+
+	&.contact{
+		background: #242424; /* Old browsers */
+		//background: linear-gradient(135deg, #333333 0%, #424242 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#333333", endColorstr="#424242", GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		padding: 20px 0 25px;
+		position: relative;
+		.elem-esp{
+			margin-left: -30px;
+		}
+		.text-map{
+			font-size: 1.3rem;
+		}
+		.text-left{
+			img{
+				vertical-align: inherit;
+			}
+		}
+		.img-footer{
+			max-width: 95%;
+		}
+		h2{
+			color: $colorTextoSecundario;
+			padding-left: 15px;
+		}
+		p {
+			margin: 0 0 5px;
+		}
+		p > a{
+			color: white;
+		}
+		//&.contact {
+			ul,
+			li {
+				display: inline-block;
+				.va-e{
+					vertical-align: bottom;
+					padding-bottom: 3px;
+					padding-left: 6px;
+				}
+			}
+
+		//}
+		.diff{
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: $colorTextoSecundario;
+			height: 100%;
+			width: 320px;
+			p{
+				padding: 50px 40px 10px 40px;
+			}
+		}
+	}
+	hr{
+		width: 100px; 
+		height: 1px; 
+		background-color: $colorPrimario;
+	}
+	&#portfolio,
+	&#education,
+	&#skills{
+		h2{
+			text-align: center;
+		}
+	}
+	&.aboutMe{
+		background: #44263b; /* Old browsers */
+		background: linear-gradient(135deg, #44263b 0%, #694654 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#44263b", endColorstr="#694654", GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+	&.bgSecundary{
+		background: #2e3951; /* Old browsers */
+		background: linear-gradient(135deg, #2e3951 0%, #4d5872 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#2e3951", endColorstr="#4d5872", GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	}
+	&.bgEducation{
+		background: #382b53; /* Old browsers */
+		background: linear-gradient(135deg, #382b53 0%, #2E3FA0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#382b53", endColorstr="#2E3FA0", GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	}
+	&.bgSkills{
+		background: #a01a55; /* Old browsers */
+		background: linear-gradient(135deg, #a01a55 0%, #a01a55 0%, #bd3c5a 50%, #dd5e5e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#a01a55", endColorstr="#dd5e5e", GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+	&#portfolio{
+		background: #382b53; /* Old browsers */
+		background: linear-gradient(135deg, #382b53 0%, #55486f 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#382b53", endColorstr="#55486f", GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+
+}

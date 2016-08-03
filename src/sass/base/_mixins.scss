@@ -1,0 +1,20 @@
+@mixin add-color($size, $color, $position){
+	@if $position == "all"{
+		border: $size solid $color;
+	} @else if $position  == "top"{
+		border-top: $size solid $color;
+	} @else if $position  == "right"{
+		border-right: $size solid $color;
+	} @else if $position  == "bottom"{
+		border-bottom: $size solid $color;
+	} @else if $position  == "left"{
+		border-left: $size solid $color;
+	}
+}
+@mixin transition($args...) {
+/*  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;*/
+  transition: $args;
+}

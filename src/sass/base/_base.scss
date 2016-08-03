@@ -1,0 +1,78 @@
+html{
+    font-size: 62.5%;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+body{
+	font-size: 1.6rem; 
+    font-family: $textoPrimario;
+    color: $colorTextoPrincipal
+}
+h2{
+  font-size: 3rem;  
+}
+h3{
+    padding-bottom: 20px;
+}
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 0;
+    list-style: none;
+}
+a:focus,
+a:hover {
+    color: $colorPrimario;
+    text-decoration: none;
+}
+article {
+    clear: both;
+    overflow: hidden;
+    margin: 50px;
+}
+.logo{
+	float: left;
+    display: inline;
+    width: 66px;
+    margin-top: -8px;
+}
+.fa-2x {
+    font-size: 2rem;
+    color: $colorTextoSecundario;
+    padding-right: 10px;
+}
+.fa-4x {
+    font-size: 3rem;
+    color: $colorTextoSecundario;
+    padding-right: 10px;
+}
+.fa-6x {
+    font-size: 6rem;
+    color: $colorTextoPrincipal;
+}
+mark{
+    background-color: $colorTextoSecundario;
+    a,
+    a:link,
+    a:hover{
+        color: $colorTextoCabeceras;
+    }
+}
+.img-responsive{
+    display: inline;
+}
+
+span.hash{
+    background-color: rgba(255, 255, 255, .2);
+    color: #f2f2f2;
+    padding: 1px;
+}
+
+.logos-lenguajes img{
+    width: 60px;
+}
+
