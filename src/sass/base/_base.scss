@@ -24,6 +24,9 @@ ul {
     padding-left: 0;
     list-style: none;
 }
+img {
+    max-width: 100%;
+}
 a:focus,
 a:hover {
     color: $colorPrimario;

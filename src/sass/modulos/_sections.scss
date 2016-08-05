@@ -88,6 +88,33 @@ section {
 		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#333333", endColorstr="#424242", GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 		padding: 20px 0 25px;
 		position: relative;
+		li {
+			display: block;
+			margin-bottom: 1.2rem;
+			.va-e{
+				vertical-align: bottom;
+				padding-bottom: 3px;
+				padding-left: 6px;
+			}
+		}
+		.no-padding-lateral {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.p-section--logos-table {
+			display: table;
+			width: 100%;
+			margin: 40px 0;
+			.p-section--logos-table-container {
+				display: table-row;
+				.p-section--logos-cell {
+					display: table-cell;
+					text-align: center;
+				}
+			}
+		}
+
+
 		.elem-esp{
 			margin-left: -30px;
 		}
@@ -112,25 +139,19 @@ section {
 		p > a{
 			color: white;
 		}
-		//&.contact {
-			ul,
-			li {
-				display: inline-block;
-				.va-e{
-					vertical-align: bottom;
-					padding-bottom: 3px;
-					padding-left: 6px;
-				}
-			}
-
-		//}
+		ul > li > a:link,
+		ul > li > a:hover,
+		ul > li > a:visited,
+		ul > li > a:focus {
+			color: $colorTextoSecundario;
+		}
 		.diff{
 			position: absolute;
 			top: 0;
 			right: 0;
 			background-color: $colorTextoSecundario;
 			height: 100%;
-			width: 320px;
+			width: 380px;
 			p{
 				padding: 50px 40px 10px 40px;
 			}
