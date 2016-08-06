@@ -1,4 +1,5 @@
 _media_no_subir
 **/*.old*
 node_modules
-dist
+dist/*
+!dist/lib
