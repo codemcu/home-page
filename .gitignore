@@ -3,3 +3,5 @@ _media_no_subir
 node_modules
 dist/*
 !dist/lib
+index.html
+!src/index.html
