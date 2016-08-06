@@ -5,3 +5,4 @@ dist/*
 !dist/lib
 index.html
 !src/index.html
+bower_components

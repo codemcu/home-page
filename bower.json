@@ -1,0 +1,21 @@
+{
+  "name": "home_page",
+  "description": "Página personal",
+  "main": "index.js",
+  "authors": [
+    "mauricio correa (frontend.mcu@gmail.com)"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mauaunot/home-page",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.6",
+    "animate.css": "^3.5.2"
+  }
+}
