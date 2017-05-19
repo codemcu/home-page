@@ -88,6 +88,11 @@ section {
 		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#333333", endColorstr="#424242", GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 		padding: 20px 0 25px;
 		position: relative;
+		img.perfil {
+			width: 100%;
+			max-width: 190px;
+			border-radius: 50%;
+		}
 		li {
 			display: block;
 			margin-bottom: 1.2rem;
